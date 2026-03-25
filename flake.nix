@@ -15,12 +15,7 @@
       moduleWithSystem,
       ...
     }: {
-      systems = [
-        "x86_64-linux"
-        "x86_64-darwin"
-        "aarch-linux"
-        "aarch-darwin"
-      ];
+      systems = inputs.nixpkgs.lib.platforms.unix;
       perSystem = {
         system,
         config,
